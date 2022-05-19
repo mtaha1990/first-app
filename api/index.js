@@ -1,4 +1,4 @@
-exports.handler = async function http (req) {
+/*exports.handler = async function http (req) {
   console.log('Begin API called')
   return {
     headers: {
@@ -12,3 +12,17 @@ exports.handler = async function http (req) {
   }
 }
 
+*/
+
+const http = require('http');
+
+
+http.createServer((req,res)=>{
+
+res.send(req.url);
+});
+
+
+http.listen(3500, () => {
+  console.log('listening...');
+});
